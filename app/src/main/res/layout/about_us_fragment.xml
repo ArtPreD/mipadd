@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77f14b4b"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome on the Mipadd, the first free market of paddy rice in Europe.
+
+The aim of Mipadd is to put in direct relations rice growers / sellers and a range of buyers (industrials), French and European, for the sale of paddy rice.
+
+It is typically a website of brokerage online, which allows to deposit quantities of paddy rice at a duration and price determined, in order to propose the buyers, who regularly come to visit the website.
+
+Mipadd is neutral and allows the conclusion of contracts in perfect transparency : a quantity, a price, a place, a duration for the offer.
+
+Mipadd is not a party in the contract, it is a way to confirm the agreement between the Seller and the Buyer, and to follow its execution in good order.">
+    </TextView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MIPADD App</string>
+    <string name="authorization">Authorization</string>
+    <string name="UserName">Username</string>
+    <string name="EnterUserName">Enter username</string>
+    <string name="password">Password</string>
+    <string name="EnterPassword">Enter password</string>
+    <string name="login">Login</string>
+    <string name="or">-OR-</string>
+    <string name="offlineMode">Register</string>
+    <string name="Email">Email</string>
+    <string name="EnterEmail">Enter email</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+</resources>

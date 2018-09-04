@@ -1,104 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.artem.myapplication.LoginActivity">
 
-    <TextView
-        android:id="@+id/authorizationText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/authorization"
-        android:textColor="#000000"
-        android:textStyle = "bold"
-        android:layout_margin="20dp"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:id="@+id/UserNameText"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Email"
-        android:layout_margin="10dp"
-        android:textColor="#000000"
-        android:layout_below="@id/authorizationText"
-        />
-
-    <EditText
-        android:id="@+id/EnterEmail"
-        android:layout_centerInParent="true"
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textEmailAddress"
-        android:layout_below="@id/UserNameText"
-        android:hint="@string/EnterEmail"
-        />
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/passwordText"
-        android:gravity="center"
-        android:textColor="#000000"
+    <ScrollView
+        android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/password"
-        android:layout_margin="10dp"
-        android:layout_below="@id/EnterEmail"/>
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/EnterPassword"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/EnterPassword"
-        android:layout_below="@id/passwordText"/>
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_centerInParent="true"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/EnterPassword"/>
+            <TextView
+                android:id="@+id/authorizationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/authorization"
+                android:textColor="#000000"
+                android:textStyle = "bold"
+                android:layout_margin="20dp"
+                android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/or"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/or"
-        android:textColor="#000000"
-        android:textStyle = "bold"
-        android:textSize="20sp"
-        android:layout_below="@id/login"
-        android:layout_margin="20dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/signUp"
-        android:layout_centerInParent="true"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/offlineMode"
-        android:layout_below="@id/or"/>
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
 
-    <TextView
-        android:id="@+id/errorMessage"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#ff0000"
-        android:textSize="16sp"
-        android:layout_margin="30dp"
-        android:layout_below="@id/signUp"/>
+            </android.support.design.widget.TextInputLayout>
 
-</RelativeLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter password"
+                    android:imeActionId="6"
+                    android:imeActionLabel="Sign in"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <CheckBox
+                android:text="Remember me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/sign_in"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sign in"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-OR-"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sign up"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

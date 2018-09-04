@@ -38,21 +38,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         presenter = new MainPresenterImpl();
         presenter.attachView(this);
 
-        Button loginBtn = (Button) findViewById(R.id.login);
+        Button loginBtn = (Button) findViewById(R.id.sign_in);
         loginBtn.setOnClickListener(this);
-        Button registerBtn = (Button) findViewById(R.id.signUp);
+        Button registerBtn = (Button) findViewById(R.id.sign_up);
         registerBtn.setOnClickListener(this);
 
-        email = (EditText) findViewById(R.id.EnterEmail);
-        password = (EditText) findViewById(R.id.EnterPassword);
-
-        error = (TextView) findViewById(R.id.errorMessage);
+//        email = (EditText) findViewById(R.id.EnterEmail);
+//        password = (EditText) findViewById(R.id.EnterPassword);
+//
+//        error = (TextView) findViewById(R.id.errorMessage);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.login:
+            case R.id.sign_in:
                 Log.d(TAG, "click login button");
                // if (presenter.loginUser()){
                 //put user details in intent!!!
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     startActivity(intent1);
                // }
                 break;
-            case R.id.signUp:
+            case R.id.sign_up:
                 Log.d(TAG, "click register button");
                 presenter.detachView();
                 Log.d(TAG, "create new intent");

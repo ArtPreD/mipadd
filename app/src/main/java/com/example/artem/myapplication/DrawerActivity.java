@@ -85,6 +85,7 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_myOffers) {
+            fTrans.replace(R.id.frgmCont, aboutUs);
             Log.d(TAG, "Click on \"My offers and binds\" menu item");
         } else if (id == R.id.nav_mySigned) {
             Log.d(TAG, "Click on \"My signed contracts\" menu item");
